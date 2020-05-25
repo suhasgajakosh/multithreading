@@ -1,0 +1,11 @@
+package semaphores;
+
+
+public class Connection {
+	
+	private static Connection instance = new Connection();
+	
+	private int connection =0;
+	
+	
+}

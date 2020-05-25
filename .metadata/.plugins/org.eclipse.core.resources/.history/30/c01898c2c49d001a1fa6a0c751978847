@@ -1,0 +1,14 @@
+package multiplelocks;
+
+import java.awt.List;
+
+public class Worker {
+	
+	private List<Integer> list1 = new List();
+
+	public static void main(String[] args) {
+
+		System.out.println("Hello");
+	}
+
+}

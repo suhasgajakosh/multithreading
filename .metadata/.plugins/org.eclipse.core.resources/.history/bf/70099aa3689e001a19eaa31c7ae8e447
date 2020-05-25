@@ -1,0 +1,9 @@
+package semaphores;
+
+import java.nio.channels.ConnectionPendingException;
+
+public class Connection {
+	
+	private static Connection instance = new Connection();
+
+}

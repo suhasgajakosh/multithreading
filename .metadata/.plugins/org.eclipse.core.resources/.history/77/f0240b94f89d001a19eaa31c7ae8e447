@@ -1,0 +1,28 @@
+package countdownlatches;
+
+import java.util.concurrent.CountDownLatch;
+
+class Processor implements Runnable {
+
+	private CountDownLatch latch;
+
+	public Processor(CountDownLatch latch) {
+		this.latch = latch;
+	}
+
+	@Override
+	public void run() {
+
+	}
+
+}
+
+public class App {
+
+	public static void main(String[] args) {
+
+		CountDownLatch latch = new CountDownLatch(3);
+
+	}
+
+}

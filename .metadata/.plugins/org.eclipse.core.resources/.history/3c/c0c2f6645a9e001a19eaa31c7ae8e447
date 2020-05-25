@@ -1,0 +1,18 @@
+package producerconsumerlowlevelsync;
+
+import java.util.LinkedList;
+
+public class Processor {
+	
+	private LinkedList<Integer> list = new LinkedList<>();
+	private final int LIMIT = 10;
+	
+	public void produce() throws InterruptedException {
+		
+	}
+	
+	public void consume() throws InterruptedException {
+		
+	}
+
+}

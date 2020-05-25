@@ -1,0 +1,18 @@
+package synchonization;
+
+class ThreadClass extends Thread {
+	
+}
+
+public class Synchronization1 {
+	
+	
+	
+	private static void main() {
+	
+		Thread t1 = new Thread();
+		t1.start();
+		
+	}
+
+}

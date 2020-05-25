@@ -1,0 +1,15 @@
+package waitnotify;
+
+
+public class Processor {
+	
+	
+	public void producer() throws InterruptedException {
+		
+	}
+	
+	public void consume() throws InterruptedException {
+		
+	}
+
+}

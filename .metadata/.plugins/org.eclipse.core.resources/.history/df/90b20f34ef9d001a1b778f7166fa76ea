@@ -1,0 +1,24 @@
+package threadpool;
+
+class Processor implements Runnable {
+
+	 public Processor(int id) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void run() {
+
+		
+	}
+	
+}
+
+public class App {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}

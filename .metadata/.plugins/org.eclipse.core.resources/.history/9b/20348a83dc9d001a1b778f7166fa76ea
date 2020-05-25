@@ -1,0 +1,94 @@
+package multiplelocks;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Worker {
+	
+	private Random random = new Random();
+	int count1 = 0;
+	int count2 = 0;
+	private List<Integer> list1 = new ArrayList<>();
+	private List<Integer> list2 = new ArrayList<>();
+	
+	public synchronized void stageOne() {
+		try {
+			count1 = count1+1;
+			Thread.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//list1.add(random.nextInt(100));
+		list1.add(count1);
+	}
+	
+	public synchronized void stageTwo() {
+
+		try {
+			count2 = count2 + 2;
+			Thread.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//list2.add(random.nextInt(100));
+		list2.add(count2);
+	}
+	
+	public void process() {
+		for (int i=0; i<10; i++) {
+			stageOne();
+			stageTwo();
+		}
+	}
+			
+ 
+	public void main() {
+
+		System.out.println("Sarting ......");
+		long start = System.currentTimeMillis();
+		
+		Thread t1 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				process();
+			}
+		});
+		
+		Thread t2 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				process();
+			}
+		});
+		t1.start();
+		t2.start();
+		
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		long end = System.currentTimeMillis();
+		System.out.println("Time taken ...." + (end-start));
+		System.out.println("List1...."+list1.size());
+		for (int val : list1) {
+			System.out.println(val);
+		}
+		System.out.println("List2...."+list2.size());
+		
+		for (int val : list2) {
+			System.out.println(val);
+		}
+		System.out.println(".......... Ending");
+	}
+
+}
