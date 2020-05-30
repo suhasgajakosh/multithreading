@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;App.java&apos; to &apos;re-entrantlocks/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;producerconsumerlowlevelsync&apos;&#x0D;&#x0A;- Destination element: &apos;re-entrantlocks/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;producerconsumerlowlevelsync.App.java&apos;" description="Copy compilation unit" destination="=re-entrantlocks/src&lt;" element1="/src&lt;producerconsumerlowlevelsync{App.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1590785568233" units="1" version="1.0"/>
+</session>
